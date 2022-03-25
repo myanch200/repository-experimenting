@@ -2,132 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./Profile.css">
+    <!-- <link rel="stylesheet" href="./Profile.css"> -->
     <script type="text/javascript" src="./main.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./site.css">
+    <link rel="stylesheet" href="./authenthications.css">
     <title>Document</title>
 </head>
 
 
 <body>
 
-<section class="section-one">
-    <div class="Container">
+<header class="flex profile-header" >
+<img src="./Images/Xplosive.png" height="75" width="75" alt="">
+<div class="profile-hero-border">
+  <h1 class="purple">Profile</h1>
+  <div class="border-container flex">
 
-        <div class="profileShapes">
-        <div class ="rectangleSmall"></div>
-        <div class ="rectangleSmall"></div>
-        <div id ="rectangleLarge"></div>
+    <div class="hero-border lg">
+    </div>
+    <div class="hero-border m"></div>
+    <div class="hero-border m"></div>
+  </div>
 
+</div>
+
+</header>
+
+<section class="profile-body">
+
+  <div class="form-wrapper">
+    <div class="form-container">
+      <form action="" id="profile-form" method="GET">
+        <div class="gender-fields flex-column">
+          <div class="">
+            <label for="maleRadio">
+              <h3 class="purple">Male</h3>
+              <img class="gender-image male"src="./Images/male_Working.png" alt="">
+
+            </label>
+            <input class="hidden" id="maleRadio" type="radio" name="gender" value="male">
+          </div>
+          <div class="">
+            <label for="femaleRadio">
+              <h3 class="light-purple">Female</h3>
+              <img class="gender-image female"src="./Images/women_Working.png"  alt="">
+              
+
+            </label>
+            <input  class="hidden" id="femaleRadio" type="radio" name="gender" value="female">
+          </div>
         </div>
-
-        <img src="./Images/Xplosive.png" id="profileImg">
-        <div class ="h1">Profile</div>
-
-
-
+        <div class="form-group flex-column">
+          <label for="weightInput">Weight</label>
+          <input class="form-control" type="number" name="weight" id="weightInput" min="20" step="any">
+        </div>
+        <div class="form-group flex-column">
+          <label for="heightInput">Height</label>
+          <input class="form-control" type="number" name="height" id="heightInput" min="20" step="any">
+        </div>
+        <div class="form-group flex-column">
+          <label for="activityLevel">Activity Level</label>
+          <select class="form-control" name="activityLevel" id="activityLevel">
+            <option value="0">-----------</option>
+            <option value="1.2">Sedentary</option>
+            <option value="1.375">Lightly Active</option>
+            <option value="1.55">Moderately Active</option>
+            <option value="1.725">Very Active</option>
+            <option value="1.9">Extremely Active</option>
+          </select>
+        </div>
+  
+        <div class="form-group flex-column">
+          <label for="goal">Goal</label>
+          <select class="form-control" name="goal" id="goal">
+            <option value="0">-----------</option>
+            <option value="1">Lose Weight</option>
+            <option value="2">Maintain Weight</option>
+            <option value="3">Gain Weight</option>
+          </select>
+        </div>
+        <div class="form-group flex-column">
+          <label for="weightGoal">Weight goal</label>
+          <input class="form-control" type="number" name="weightGoal" id="weightInput" min="20" step="any">
+        </div>
+        <div class="submit-btn-wrapper form-group">
+          <button type="submit" class="btn medium white dark-purple-bg">Calculate</button>
+      </div>
+      </form>
+    </div>
 </section>
 
-
-<section class="section-two">
-    <div class="Container">
-
-        <div class ="h1" style="text-decoration: underline;">Gender</div>
-
-        <img src="./Images/male_Working.png" id="workingImg">
-        <img src="./Images/women_Working.png" id="workingImg">
-        
-</section>
-
-
-<section class="section-three">
-    <div class="Container">
-
-        <div class ="h1">Metrics</div>
-
-        
-        
-</section>
-
-
-<section class="section-four">
-    <div class="Container">
-
-        <table class="inputTable">
-            <tr>
-              <th><div id="unitTextI">International</div></th>
-              <th><div id="rotated"></div></th>
-              <th><div id="unitTextM">Inperial</div></div></th>
-            </tr>
-            <tr>
-              <td><div class="mainText">Weight</div></td>
-              <td><div class="mainBox">.</div></td>
-            </tr>
-            <tr>
-              <td><div class="mainText">Height</div></td>
-              <td><div class="mainBox">.</div></td>
-            </tr>
-            <tr>
-                <td><div class="mainText">Activity level</div></td>
-                <td><div class="dropdown" >
-                    <button onclick="myFunction()" class="dropbtn">Light Exercise 1-2 times/week</button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="#NA">Medium Exercise 3-4 times/week</a>
-                      <a href="#NA1">Heavy Exercise 5 times/week</a>
-                      <a href="#NA2">Very heavy Exercise 6+ times/week</a>
-                    </div>
-                  </div></td>
-            </tr>
-            <tr>
-                <td><div class="mainText">Goal</div></td>
-                <td>Add box</td>
-            </tr>
-            <tr>
-                <td><div class="mainText">Weight Goal</div></td>
-                <td><div class="mainBox">.</div></td>
-            </tr>
-          </table>
-
-          
-
-          
-<section class="section-five">
-    <div class="Container">
-
-        <table class="inputTable">
-            <tr>
-              <th><a class="profileButton" style="background-color: #7E34A4;" >Calculate</a></th>
-            </tr>
-            <tr>
-              <td><div class="line"></div></td>
-              <td><div class="mainText">You need to consume 3000 calories per day</div></td>
-              <td><div class="line"></div></td>
-            </tr>
-            <tr>
-                <td><div class="mainText">Start your journey by monitoring</div></td>
-            </tr>
-            <tr>
-              <td><a class="profileButton" style="background-color: #4828AB;" >Calculate</a></td>
-              <td><a class="profileButton" style="background-color: #BD44A0;" >Calculate</a></td>
-            </tr>
-            
-           
-            
-          </table>
-        
-        
-
-        
-        
-</section>
-
-          
-          
-
-        
-        
-</section>
 
 
 </body>
